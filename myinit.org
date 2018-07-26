@@ -1,0 +1,20 @@
+#+STARTUP: overview
+
+* interface tweaks
+
+#+BEGIN_SRC emacs-lisp
+(setq inhibit-startup-message t)
+(tool-bar-mode -1)
+(fset 'yes-or-no-p 'y-or-n-p)
+(global-set-key (kbd "<f5>") 'revert-buffer)
+#+END_SRC
+
+* which key
+Brings up some help
+
+#+BEGIN_SRC emacs-lisp
+(use-package which-key
+:ensure t 
+:config
+(which-key-mode))
+#+END_SRC
