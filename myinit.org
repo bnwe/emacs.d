@@ -8,6 +8,16 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 #+END_SRC
 
+* Which Key
+Brings up some help
+
+#+BEGIN_SRC emacs-lisp
+(use-package which-key
+:ensure t 
+:config
+(which-key-mode))
+#+END_SRC
+
 * Themes and Font
 Note: For some reaseon I get an error with use-package and spacemacs-theme. So I installed the package manually.
 #+BEGIN_SRC emacs-lisp
@@ -25,6 +35,20 @@ Note: For some reaseon I get an error with use-package and spacemacs-theme. So I
 
 ;; Opens the status popup (like git status)
 (global-set-key (kbd "C-x g") 'magit-status)
+#+END_SRC
+
+* Org Mode
+#+BEGIN_SRC emacs-lisp
+;; Org-mode keybindings
+;; These are necessary according to http://orgmode.org/worg/org-faq.html
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-co" 'org-iswitchb) ;; NOTE: did not use default because of clash
+
+;; Don't like using the arrow keys
+(global-set-key (kbd "C-M-l") 'org-metaright)
+(global-set-key (kbd "C-M-h") 'org-metaleft)
 #+END_SRC
 
 * Keys
@@ -87,28 +111,7 @@ Note that bindings for imported packages are found in the corresponding section 
 ;; (global-set-key (kbd "<C-down>") 'buf-move-down)
 ;; (global-set-key (kbd "<C-up>") 'buf-move-up)
 
-;; Org-mode keybindings
-;; These are necessary according to http://orgmode.org/worg/org-faq.html
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cc" 'org-capture)
-(global-set-key "\C-co" 'org-iswitchb) ;; NOTE: did not use default because of clash
-
-;; Don't like using the arrow keys
-(global-set-key (kbd "C-M-l") 'org-metaright)
-(global-set-key (kbd "C-M-h") 'org-metaleft)
-
 ;; eyebrowse
 ;(global-set-key (kbd "C-9") 'eyebrowse-prev-window-config)
 ;(global-set-key (kbd "C-0") 'eyebrowse-next-window-config)
-#+END_SRC
-
-* which key
-Brings up some help
-
-#+BEGIN_SRC emacs-lisp
-(use-package which-key
-:ensure t 
-:config
-(which-key-mode))
 #+END_SRC
