@@ -6,7 +6,19 @@
 (setq inhibit-startup-message t)
 (tool-bar-mode -1)
 (fset 'yes-or-no-p 'y-or-n-p)
-(global-set-key (kbd "<f5>") 'revert-buffer)
+#+END_SRC
+
+* Themes
+Note: For some reaseon I get an error with use-package and spacemacs-theme. So I installed the package manually.
+#+BEGIN_SRC emacs-lisp
+(load-theme 'spacemacs-dark t)
+#+END_SRC
+
+* Keys
+** CUA Mode
+#+BEGIN_SRC emacs-lisp
+(cua-mode t)
+(setq cua-paste-pop-rotate-temporarily t)
 #+END_SRC
 
 * which key
@@ -17,4 +29,15 @@ Brings up some help
 :ensure t 
 :config
 (which-key-mode))
+#+END_SRC
+
+* Magit
+#+BEGIN_SRC emacs-lisp
+(use-package magit
+  :init
+  ;; Disable emacs internal version control
+  (setq vc-handled-backends nil))
+
+;; Opens the status popup (like git status)
+(global-set-key (kbd "C-x g") 'magit-status)
 #+END_SRC
