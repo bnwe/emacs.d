@@ -1,6 +1,6 @@
 #+STARTUP: overview
 
-* interface tweaks
+* Interface Tweaks
 
 #+BEGIN_SRC emacs-lisp
 (setq inhibit-startup-message t)
@@ -8,10 +8,12 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 #+END_SRC
 
-* Themes
+* Themes and Font
 Note: For some reaseon I get an error with use-package and spacemacs-theme. So I installed the package manually.
 #+BEGIN_SRC emacs-lisp
 (load-theme 'spacemacs-dark t)
+
+(set-face-attribute 'default nil :height 90) ;; set default font size to 9 pt
 #+END_SRC
 
 * Keys
