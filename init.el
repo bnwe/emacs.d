@@ -9,6 +9,8 @@
 	     '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
+(add-to-list 'load-path "~/.emacs.d/elisp/")
+
 ;; Bootstrap `use-package'
 (unless (package-installed-p 'use-package)
 	(package-refresh-contents)
