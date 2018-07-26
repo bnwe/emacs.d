@@ -1,0 +1,9 @@
+elpa
+auto-save-list/
+
+myinit.el
+init.el~
+myinit.org~
+.emacs.desktop
+.emacs.desktop.lock
+
