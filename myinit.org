@@ -51,6 +51,16 @@ Note: For some reaseon I get an error with use-package and spacemacs-theme. So I
 (global-set-key (kbd "C-M-h") 'org-metaleft)
 #+END_SRC
 
+* Navigation, Projects, etc.
+** Projectile
+#+BEGIN_SRC emacs-lisp
+(use-package projectile
+  :ensure t
+  :config
+  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+  (projectile-mode +1))
+#+END_SRC
+
 * Keys
 ** CUA Mode
 #+BEGIN_SRC emacs-lisp
