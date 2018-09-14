@@ -18,6 +18,43 @@ Brings up some help
 (which-key-mode))
 #+END_SRC
 
+* Sensible defaults
+For this I picked some of the code from https://github.com/hrs/sensible-defaults.el
+
+#+BEGIN_SRC emacs-lisp
+(defun sensible-defaults/comment-or-uncomment-region-or-line ()
+  "Comments or uncomments the region or the current line if
+there's no active region."
+  (interactive)
+  (let (beg end)
+    (if (region-active-p)
+        (setq beg (region-beginning) end (region-end))
+      (setq beg (line-beginning-position) end (line-end-position)))
+(comment-or-uncomment-region beg end)))
+
+(bind-key "C-/" 'sensible-defaults/comment-or-uncomment-region-or-line)
+
+
+;;  "Treat CamelCaseSubWords as separate words in every programming mode."
+(add-hook 'prog-mode-hook 'subword-mode)
+
+
+;;   "Add file sizes in human-readable units (KB, MB, etc) to dired buffers."
+(setq-default dired-listing-switches "-alh")
+
+
+;;  "When something changes a file, automatically refresh the buffer containing that file so they can't get out of sync."
+(global-auto-revert-mode t)
+
+
+;;  "Visually indicate matching pairs of parentheses."
+(show-paren-mode t)
+(setq show-paren-delay 0.0)
+#+END_SRC
+
+#+RESULTS:
+: -alh
+
 * Themes and Font
 Note: For some reaseon I get an error with use-package and spacemacs-theme. So I installed the package manually.
 #+BEGIN_SRC emacs-lisp
@@ -72,7 +109,7 @@ Note: For some reaseon I get an error with use-package and spacemacs-theme. So I
 Note that bindings for imported packages are found in the corresponding section and not here
 
 #+BEGIN_SRC emacs-lisp
-;; Toggle visual line mode (warp lines nicely)
+;; Toggle visual line mode (wrap lines nicely)
 (global-set-key (kbd "<f12>") 'visual-line-mode)
 
 ;; Refresh with F5
