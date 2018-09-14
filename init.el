@@ -6,7 +6,16 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/"))
+	     '("melpa-stable" . "https://stable.melpa.org/packages/"))
+;; Note: Only add MELPA if MELPA-stable is not enough
+;;(add-to-list 'package-archives
+;;	     '("melpa" . "https://melpa.org/packages/"))
+
+;; Note: It is possible to pin packages to melpa-stable like this:
+;; (setq package-pinned-packages
+;;      '((imenu-anywhere . "melpa-stable")
+;;        (spaceline . "melpa-stable")))
+
 (package-initialize)
 
 (add-to-list 'load-path "~/.emacs.d/elisp/")
