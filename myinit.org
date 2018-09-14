@@ -1,21 +1,14 @@
 #+STARTUP: overview
 
+* Notes
+Show my custom keybindings with describe-personal-keybindings (works for those defined with use-package and bind-key).
+
 * Interface Tweaks
 
 #+BEGIN_SRC emacs-lisp
 (setq inhibit-startup-message t)
 (tool-bar-mode -1)
 (fset 'yes-or-no-p 'y-or-n-p)
-#+END_SRC
-
-* Which Key
-Brings up some help
-
-#+BEGIN_SRC emacs-lisp
-(use-package which-key
-:ensure t 
-:config
-(which-key-mode))
 #+END_SRC
 
 * Sensible defaults
@@ -52,8 +45,15 @@ there's no active region."
 (setq show-paren-delay 0.0)
 #+END_SRC
 
-#+RESULTS:
-: -alh
+* Which Key
+Brings up some help.
+
+#+BEGIN_SRC emacs-lisp
+(use-package which-key
+:ensure t
+:config
+(which-key-mode))
+#+END_SRC
 
 * Themes and Font
 Note: For some reaseon I get an error with use-package and spacemacs-theme. So I installed the package manually.
