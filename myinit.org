@@ -102,10 +102,10 @@ Note: For some reaseon I get an error with use-package and spacemacs-theme. So I
 ** Projectile
 #+BEGIN_SRC emacs-lisp
 (use-package projectile
-  :ensure t
+  :bind-keymap
+  ("C-c p" . projectile-command-map)
   :config
-  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-  (projectile-mode +1))
+  (unbind-key "C-c C-p" projectile-mode-map)) ;; Somehow, C-c C-p is the default, even though the documentation says otherwise.
 #+END_SRC
 
 * Keys TODO: Use bind-key.el
