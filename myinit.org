@@ -60,7 +60,7 @@ Note: For some reaseon I get an error with use-package and spacemacs-theme. So I
 #+BEGIN_SRC emacs-lisp
 ;;(load-theme 'spacemacs-dark t) Currently not using spacemacs-theme (does not work out of the box on windows)
 
-(set-face-attribute 'default nil :height 110) ;; set default font size
+(set-face-attribute 'default nil :height 120) ;; set default font size
 #+END_SRC
 
 * Magit - CURRENTLY DISABLED
