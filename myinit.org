@@ -58,13 +58,13 @@ Brings up some help.
 * Themes and Font
 Note: For some reaseon I get an error with use-package and spacemacs-theme. So I installed the package manually.
 #+BEGIN_SRC emacs-lisp
-(load-theme 'spacemacs-dark t)
+;;(load-theme 'spacemacs-dark t) Currently not using spacemacs-theme (does not work out of the box on windows)
 
-(set-face-attribute 'default nil :height 90) ;; set default font size to 9 pt
+(set-face-attribute 'default nil :height 110) ;; set default font size
 #+END_SRC
 
-* Magit
-#+BEGIN_SRC emacs-lisp
+* Magit - CURRENTLY DISABLED
+###+BEGIN_SRC emacs-lisp
 (use-package magit
   :init
   ;; Disable emacs internal version control
@@ -72,7 +72,7 @@ Note: For some reaseon I get an error with use-package and spacemacs-theme. So I
 
 ;; Opens the status popup (like git status)
 (global-set-key (kbd "C-x g") 'magit-status)
-#+END_SRC
+###+END_SRC
 
 * Org Mode
 #+BEGIN_SRC emacs-lisp
@@ -136,8 +136,8 @@ Note that bindings for imported packages are found in the corresponding section 
 #+BEGIN_SRC emacs-lisp
 ;; Avy (jump to words or lines)
 ;; Check out https://github.com/abo-abo/avy for more cool stuff!
-(global-set-key (kbd "C-:") 'avy-goto-word-1)
-(global-set-key (kbd "C-;") 'avy-goto-line)
+(global-set-key (kbd "C-Ö") 'avy-goto-word-1) ;; for qwerty use C-:
+(global-set-key (kbd "C-ö") 'avy-goto-line) ;; for qwerty use C-;
 
 ;; Toggle visual line mode (wrap lines nicely)
 (global-set-key (kbd "<f12>") 'visual-line-mode)
