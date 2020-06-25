@@ -11,6 +11,11 @@ Show my custom keybindings with describe-personal-keybindings (works for those d
 (fset 'yes-or-no-p 'y-or-n-p)
 #+END_SRC
 
+Enable visual line mode globally (wraps lines)
+#+BEGIN_SRC emacs-lisp
+(global-visual-line-mode 1)
+#+END_SRC
+
 * Sensible defaults
 For this I picked some of the code from https://github.com/hrs/sensible-defaults.el
 
