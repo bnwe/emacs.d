@@ -35,10 +35,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
+ '(auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
  '(package-selected-packages
-   (quote
-    (key-chord projectile spacemacs-theme magit which-key use-package))))
+   '(key-chord projectile spacemacs-theme magit which-key use-package)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
