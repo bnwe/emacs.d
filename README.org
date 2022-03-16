@@ -4,14 +4,21 @@
 First get e.g. emacs-<version>-x86_64.zip and unzip.
 
 Emacs will look for .emacs.d here:
+
 C:\Users\<user>\AppData\Roaming\.emacs.d
 
-So clone this repo there:
-$ cd ~/AppData/Roaming
+But better add the environment variable /PATH/ in Windows and set to C:/Users/<user>
+
+Then clone this repo there:
+
+$ cd ~/
+
 $ git clone git@github.com:bnwe/emacs.d.git .emacs.d
 
-Then create a runemacs.bat in the Autostart folder with this:
+Then create a runemacs.bat in the Autostart folder (C:\Users\<user>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup) with this:
+
 <yourpath>\emacs-27.2-x86_64\bin\runemacs.exe
 
 If needed add
+
 HOME=C:\Users\<user>
