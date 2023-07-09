@@ -35,11 +35,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector ;; this line was added automatically by the misterioso theme
+ '(ansi-color-faces-vector
    [default default default italic underline success warning error])
- '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
- '(custom-enabled-themes (quote (misterioso)))
- '(package-selected-packages (quote (key-chord projectile which-key use-package))))
+ '(auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
+ '(custom-enabled-themes '(misterioso))
+ '(package-selected-packages '(key-chord projectile which-key use-package)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
