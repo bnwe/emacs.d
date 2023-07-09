@@ -1,5 +1,8 @@
 #+TITLE: README
 
+* General
+- Make sure to have an _autosaves_ directoy in your .emacs.d
+
 * How to use on Windows
 First get e.g. emacs-<version>-x86_64.zip and unzip.
 
